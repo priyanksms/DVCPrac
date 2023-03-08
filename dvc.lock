@@ -1,0 +1,24 @@
+schema: '2.0'
+stages:
+  stage_02:
+    cmd: python file2.py
+    deps:
+    - path: data/nba2.csv
+      md5: 7128193bc4dd3fdd5eff314c46938532
+      size: 35004
+    - path: file2.py
+      md5: ffef3266e3b697c3e2f16181bd7586d2
+      size: 80
+  stage_01:
+    cmd: python file1.py
+    deps:
+    - path: data/nba.csv
+      md5: 36ce1eca3dbe16e72605d1b72c629df7
+      size: 32823
+    - path: file1.py
+      md5: a31fc1f60bc02f3a8cc4ad383ad22f6f
+      size: 195
+    outs:
+    - path: data/nba2.csv
+      md5: 7128193bc4dd3fdd5eff314c46938532
+      size: 35004

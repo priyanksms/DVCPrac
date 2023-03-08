@@ -1,0 +1,14 @@
+stages:
+  stage_01:
+    cmd: python file1.py
+    deps:
+      - data/nba.csv
+      - file1.py
+    outs:
+      - data/nba2.csv
+
+  stage_02:
+    cmd: python file2.py
+    deps:
+      - data/nba2.csv
+      - file2.py

@@ -1,3 +1,7 @@
+dvc
 numpy
 pandas
 scikit-learn
+
+## For installing local packages
+-e .

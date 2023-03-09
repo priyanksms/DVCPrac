@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: src
+Version: 0.0.1
+Summary: A simple demonstration
+Home-page: https://github.com/priyanksms/DVCPrac
+Author: Priyank
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+This is demo project 

@@ -1,14 +1,14 @@
 stages:
-  stage_01:
-    cmd: python file1.py
+  load_data:
+    cmd: python src/stage01_Load_Save.py --config=config/config.yaml
     deps:
-      - data/nba.csv
-      - file1.py
-    outs:
-      - data/nba2.csv
+      - src/stage01_Load_Save.py
+      - src/utils/ultility_Methods.py
+      - config/config.yaml
 
-  stage_02:
-    cmd: python file2.py
-    deps:
-      - data/nba2.csv
-      - file2.py
+    outs:
+      - artifacts/raw_local_dir/data.csv
+
+
+
+

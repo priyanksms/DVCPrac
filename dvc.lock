@@ -22,3 +22,19 @@ stages:
     - path: data/nba2.csv
       md5: 7128193bc4dd3fdd5eff314c46938532
       size: 35004
+  load_data:
+    cmd: python src/stage01_Load_Save.py --config=config/config.yaml
+    deps:
+    - path: config/config.yaml
+      md5: 73d88d9bf244c6892464b387fa29dc5c
+      size: 205
+    - path: src/stage01_Load_Save.py
+      md5: 41728d238b8321127e3040575df244ee
+      size: 1358
+    - path: src/utils/ultility_Methods.py
+      md5: 32b8370b7797043cf62d48ae17d5868b
+      size: 361
+    outs:
+    - path: artifacts/raw_local_dir/data.csv
+      md5: 7d814a1bda02145efe703f4e1c01847a
+      size: 93599

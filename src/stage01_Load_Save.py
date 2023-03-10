@@ -5,9 +5,10 @@ import pandas as pd
 import sys
 import os
 
+
 rootpath = pathlib.Path(__file__).parent.parent.as_posix()
 config_path = rootpath+'/config/config.yaml'
-print(rootpath)
+
 
 
 def get_data(config_path):

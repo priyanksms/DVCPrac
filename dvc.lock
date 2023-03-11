@@ -26,15 +26,46 @@ stages:
     cmd: python src/stage01_Load_Save.py --config=config/config.yaml
     deps:
     - path: config/config.yaml
-      md5: 73d88d9bf244c6892464b387fa29dc5c
-      size: 205
+      md5: 4eab84028894f65eb3edaccd5622dd4a
+      size: 338
     - path: src/stage01_Load_Save.py
-      md5: 6ab8ade0ff0c52e41a0499beaa1cea29
-      size: 1345
+      md5: 5735be06010e2f2656c3ee876c14c07d
+      size: 1324
     - path: src/utils/ultility_Methods.py
       md5: 32b8370b7797043cf62d48ae17d5868b
       size: 361
     outs:
-    - path: artifacts/raw_local_dir/data.csv
+    - path: artifacts/raw_local_dir/base_data.csv
       md5: 7d814a1bda02145efe703f4e1c01847a
       size: 93599
+  split_save_data:
+    cmd: python src/stage02_SplittingData.py --config=config/config.yaml --params=params.yaml
+    deps:
+    - path: artifacts/raw_local_dir/base_data.csv
+      md5: 7d814a1bda02145efe703f4e1c01847a
+      size: 93599
+    - path: config/config.yaml
+      md5: 4eab84028894f65eb3edaccd5622dd4a
+      size: 338
+    - path: params.yaml
+      md5: 800d62b8d4c3bf5491fe87303d8fd0ef
+      size: 62
+    - path: src/stage02_SplittingData.py
+      md5: 2847de8534d719ecc6864c8a181895ad
+      size: 2348
+    - path: src/utils/ultility_Methods.py
+      md5: 32b8370b7797043cf62d48ae17d5868b
+      size: 361
+    outs:
+    - path: artifacts/split_data/x_test.csv
+      md5: a22b88f36edebd41b10d15c34f63f3d3
+      size: 18255
+    - path: artifacts/split_data/x_train.csv
+      md5: 1408333bfdd3590bb350ebb20c5d4e87
+      size: 72277
+    - path: artifacts/split_data/y_test.csv
+      md5: 2bb2b9be5561302750f435c5be3467d6
+      size: 969
+    - path: artifacts/split_data/y_train.csv
+      md5: 1bba7bf253f85eb566168b56d13ee260
+      size: 3846

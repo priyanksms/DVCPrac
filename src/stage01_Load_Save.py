@@ -2,8 +2,7 @@ from src.utils.ultility_Methods import read_yaml, create_dir
 import pathlib
 import argparse
 import pandas as pd
-import sys
-import os
+
 
 
 rootpath = pathlib.Path(__file__).parent.parent.as_posix()

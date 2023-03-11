@@ -3,4 +3,11 @@ data_source: https://archive.ics.uci.edu/ml/machine-learning-databases/wine-qual
 artifacts:
   artifacts_dir: artifacts
   raw_local_dir: raw_local_dir
-  raw_local_file: data.csv
+  raw_local_file: base_data.csv
+  split_data_dir: split_data
+  x_train: x_train.csv
+  x_test: x_test.csv
+  y_train: y_train.csv
+  y_test: y_test.csv
+
+

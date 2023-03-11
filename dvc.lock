@@ -56,6 +56,10 @@ stages:
     - path: src/utils/ultility_Methods.py
       md5: 32b8370b7797043cf62d48ae17d5868b
       size: 361
+    params:
+      params.yaml:
+        splitting_param.random_state: 43
+        splitting_param.test_size: 0.2
     outs:
     - path: artifacts/split_data/x_test.csv
       md5: a22b88f36edebd41b10d15c34f63f3d3

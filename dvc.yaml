@@ -18,6 +18,11 @@ stages:
       - params.yaml
       - artifacts/raw_local_dir/base_data.csv
 
+    params:
+      - params.yaml:
+          - splitting_param.random_state
+          - splitting_param.test_size
+
     outs:
       - artifacts/split_data/x_test.csv
       - artifacts/split_data/x_train.csv
